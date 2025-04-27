@@ -21,8 +21,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kupingplug - Sumpel kuping untuk anda dan keluarga",
-  description: "Kupingplug - Sumpel kuping untuk anda dan keluarga",
+  title: "Arch'Afrik - Sumpel kuping untuk anda dan keluarga",
+  description: "Arch'Afrik - Sumpel kuping untuk anda dan keluarga",
 };
 
 export default function RootLayout({
