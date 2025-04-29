@@ -12,8 +12,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: "bg-[#141718] text-white",
+        secondary:
+          "border-2 border-[#141718] bg-[#141718] text-white transition-colors duration-100 ease-in hover:bg-[#0c4cc3] hover:text-white",
+
         ghost:
-          "border-2 border-transparent bg-white text-[#141718] transition-colors duration-100 ease-in hover:border-[#141718]",
+          "border-2 border-transparent bg-white text-[#141718] transition-colors duration-100 ease-in hover:border-[#0c4cc3]",
       },
       fontSize: {
         xs: "text-xs",

@@ -21,8 +21,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Arch'Afrik - Sumpel kuping untuk anda dan keluarga",
-  description: "Arch'Afrik - Sumpel kuping untuk anda dan keluarga",
+  title: "Arch'Afrik - L'Afrique en beauté, la qualité en priorité",
+  description: "Arch'Afrik - Le Portail des Produits Africains Authentiques et de Qualité. Decouvrez les dernieres tendances et collection de produits Africains aux meilleurs prix.",
+  keywords: "african products, authentic products, african fashion, african market, african clothing, african accessories, african jewelry, quality products, african beauty, african culture, african heritage, african art, african crafts, african home decor, african food, african spices, african gifts, african souvenirs",
+  authors: [{ name: "Arch'Afrik" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
+
+
+
 };
 
 export default function RootLayout({

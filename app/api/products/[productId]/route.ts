@@ -1,10 +1,8 @@
 import products from "@/data/dummy.json";
 import { NextResponse } from "next/server";
 
-export async function GET(
-  request: Request,
-  { params }: { params: { productId: string } },
-) {
+export async function GET(request: Request, props: { params: Promise<{ productId: string }> }) {
+  const params = await props.params;
   const productId = params.productId;
   const productData = products.find((product) => product.id === productId);
 

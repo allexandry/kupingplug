@@ -39,6 +39,31 @@ const Navbar: React.FC<NavbarProps> = () => {
     return () => window.removeEventListener("scroll", handleOnScroll);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [open]);
+
+  const [isUserConnected, setIsUserConnected] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkUserConnection = async () => {
+      // Replace with actual logic to check if the user is connected
+      var userConnected = await new Promise((resolve) => {
+        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+          unsubscribe();
+          resolve(!!user);
+        });
+      });
+      setIsUserConnected(userConnected as boolean);
+    };
+
+    checkUserConnection();
+  }, []);
+
   return (
     <>
       {!open && <PromoSection />}
@@ -64,7 +89,20 @@ const Navbar: React.FC<NavbarProps> = () => {
 
           <div className="flex items-center gap-1 lg:basis-1/4 lg:justify-end lg:gap-4">
             <SearchIcon className="hidden lg:block" />
-            <UserIcon className="hidden lg:block" />
+            <button
+              onClick={() => {
+              const isUserConnected = false; // Replace with actual user connection logic
+              if (isUserConnected) {
+                window.location.href = "/dashboard";
+              } else {
+                window.location.href = "/sign-up";
+              }
+              }}
+              className="hidden lg:block"
+            >
+              <UserIcon className="hidden lg:block" />
+            </button>
+            
             <CartIcon className="w-6" />
             <NotificationCount
               count={2}

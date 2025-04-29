@@ -27,11 +27,12 @@ async function getProductById(productId: string) {
   return res.json();
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { productId: string };
-}) {
+export default async function Page(
+  props: {
+    params: Promise<{ productId: string }>;
+  }
+) {
+  const params = await props.params;
   const product: Product = await getProductById(params.productId);
 
   return (

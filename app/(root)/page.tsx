@@ -31,25 +31,28 @@ export default function Home() {
         className="flex flex-col items-center justify-between lg:grid lg:grid-cols-2 lg:pt-8"
       >
         {/* Text content */}
-        <div className="flex flex-col items-center gap-4 p-8 sm:max-w-[600px] md:max-w-[600px] md:py-16 lg:order-2 lg:max-w-none lg:items-start lg:p-0">
+        <div className="flex flex-col items-center gap-4 p-8 sm:max-w-[600px] md:max-w-[600px] md:py-16 lg:order-2 lg:max-w-none lg:items-start lg:p-0 md:order-2">
           <div className="space-y-2 text-center lg:text-left">
             <Heading as="h1" intent="hero-section">
-              Listen to the <span className="text-[#377DFF]">amazing</span>{" "}
-              music sound.
+            Le Portail <span className="text-[#0c4cc3]">Qualité</span> des Produits Africains
             </Heading>
+            <br />
             <Text className="md:text-lg lg:text-xl">
-              Experience music like never before
+              Découvrez les dernières tendances aux meilleurs prix.
             </Text>
           </div>
-          <Button fontSize="sm" className="px-14 py-3 md:text-lg">
-            Shopping Now
+          <br />
+          <br />
+          <Button fontSize="sm" className="px-14 py-3 md:text-lg" variant={"secondary"}>
+          <Link href="/sign-up">Rejoindre la communauté</Link>
+            
           </Button>
         </div>
 
         {/* Image content */}
-        <div className="flex h-auto w-full items-end justify-center overflow-hidden lg:order-1">
+        <div className="hidden lg:flex md:flex h-auto w-full items-end justify-center overflow-hidden lg:order-1">
           <Image
-            src="/images/main.png"
+            src="/images/main2.png"
             width={600}
             height={761}
             alt="nigga-listening-music"
