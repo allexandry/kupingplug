@@ -51,14 +51,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   useEffect(() => {
     const checkUserConnection = async () => {
-      // Replace with actual logic to check if the user is connected
-      var userConnected = await new Promise((resolve) => {
-        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-          unsubscribe();
-          resolve(!!user);
-        });
-      });
-      setIsUserConnected(userConnected as boolean);
+      setIsUserConnected(false as boolean);
     };
 
     checkUserConnection();
